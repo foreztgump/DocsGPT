@@ -28,11 +28,7 @@ vectors_collection = db["vectors"]
 answer = Blueprint('answer', __name__)
 
 if settings.LLM_NAME == "gpt4":
-    gpt_model = 'gpt-4'
-elif settings.LLM_NAME == "gpt-4-1106-preview":
     gpt_model = 'gpt-4-1106-preview'
-elif settings.LLM_NAME == "gpt-4-32k":
-    gpt_model = 'gpt-4-32k'
 elif settings.LLM_NAME == "anthropic":
     gpt_model = 'claude-2'
 else:
