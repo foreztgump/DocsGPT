@@ -32,7 +32,7 @@ if settings.LLM_NAME == "gpt4":
 elif settings.LLM_NAME == "anthropic":
     gpt_model = 'claude-2'
 else:
-    gpt_model = 'gpt-3.5-turbo'
+    gpt_model = 'gpt-4-1106-preview'
 
 # load the prompts
 current_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
