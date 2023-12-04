@@ -28,12 +28,12 @@ vectors_collection = db["vectors"]
 prompts_collection = db["prompts"]
 answer = Blueprint('answer', __name__)
 
-if settings.LLM_NAME == "gpt4":
+if settings.LLM_NAME == "openai":
     gpt_model = 'gpt-4-1106-preview'
 elif settings.LLM_NAME == "anthropic":
     gpt_model = 'claude-2'
 else:
-    gpt_model = 'gpt-4-1106-preview'
+    gpt_model = 'gpt-3.5-turbo'
 
 # load the prompts
 current_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
